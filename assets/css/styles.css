@@ -2,6 +2,11 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
+.logo {
+    display: flex;
+    margin-left: 40%;
+}
+
 h1 {
     display: flex;
     align-items: center;
@@ -15,4 +20,11 @@ h1 {
 
 .hide {
     display: none;
+}
+
+.welcomebtn {
+    text-align: center;
+    display: grid;
+    margin: auto;
+    margin-top: 5%;
 }
