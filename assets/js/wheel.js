@@ -1,126 +1,75 @@
-console.log("this is the wheel page")
+console.log("this is the random picker page");
 
-
-// add event listener for status checked for form inputs
 
 
 // select types of cuisines
 // when selected update status to active or not active
+
 // cuisines.length = 39
-let cuisines = [
-    'Mexican',
-    'Burritos',
-    'Tacos',
-    'Italian',
-    'Pasta',
-    'Pizza',
-    'French',
-    'Indian',
-    'Middle Eastern',
-    'Moroccan',
-    'Persian',
-    'Seafood',
-    'Mediterranean',
-    'Greek',
-    'Ethiopian',
-    'Caribbean',
-    'Hawaiian',
-    'Filipino',
-    'Brazilian',
-    'Argentinian',
-    'Korean',
-    'Korean BBQ',
-    'Thai',
-    'Vietnamese',
-    'Taiwanese',
-    'Lebanese',
-    'Chinese',
-    'Japanese',
-    'Sushi',
-    'Ramen',
-    'Pho',
-    'Soup',
-    'American',
-    'BBQ',
-    'Burgers',
-    'Sandwiches',
-    'Salad',
-    'Vegan',
-    'Vegetarian'
-];
+
 
 
 // create new array based on selections
 
 
 
-// container function for all functions
-// immediately invoked
-// needed to not polute global scope
-(function() {
+// add event listener for status checked for form inputs
+
+$(document).ready(function() {
+    var checkboxes = $('input[type=checkbox]');
+});
 
 
 
-    // Function to create wheel
-    var createWheel = function() {
-        // grab wheel from html
-        const wheel = document.querySelector('.wheel');
-        const spinButton = document.querySelector('#spinBtn');
 
 
-        // spin button event listener
-        // event listen for when spin stops
-        spinButton.addEventListener('click', function() {
-
-        });
-        // grab array of selected cuisines
-
-        // update wheel segments with selections
-        // update checked status data attribute for each form input
-        wheel.addEventListener('', function() {
-
-        });
-
-        // degree of rotation
-        degOfRotation = function() {
-            // degree of spin 
-            var degree = 0;
-            var degreeOfSpin = 360;
-        };
-
-    }
+// checkboxes.forEach(function(checkbox) {
+//     checked = false;
+//     checkbox.addEventListener('change', function() {
+//         if (this.checked === 'checked') {
+//             // create new wheel segment with checked
+//         }
+//     })
+// })
 
 
-    var spinWheel = function() {
+
+// Function to create wheel
+// var foodPicker = function() {
+//         // grab wheel from html
+//         const wheel = document.querySelector('.wheel');
+//         const spinButton = document.querySelector('#spinBtn');
 
 
-            // spinButton.addEventListener(function() {});
-        }
-        // spin the wheel on click of start button
-        // spin button event listener 
-        // update degree of rotation 
-        // rotate the wheel
-        // add blur while rotating?
+// spin button event listener
+// event listen for when spin stops
+// spinButton.addEventListener('click', function() {
 
-    // randomly stop
-    // fisher-yates
-    // Math.random(Math.floor()) to randomly stop
-    var randomize = function() {
+// });
+// grab array of selected cuisines
 
-    }
+// update picker with selections
+// update checked status data attribute for each form input
 
 
-    // function to display selected food
-    // overlay, food name, icon, button to see recipes
 
 
-    // reset wheel to starting position
-    var wheelReset = function() {
+// randomly stop
+// fisher-yates
+// Math.random(Math.floor()) to randomly stop
+// var randomize = function() {
 
-    };
+// };
 
 
-})();
+// function to display selected food
+// overlay, food name, icon, button to see recipes
+
+
+
+
+
+
 
 // closing brackets for container function
 
