@@ -17,6 +17,9 @@ console.log("this is the random picker page");
 
 $(document).ready(function() {
     var checkboxes = $('input[type=checkbox]');
+    $(checkboxes).click(function() {
+        $('.check').attr()
+    })
 });
 
 
