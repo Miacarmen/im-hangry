@@ -1,4 +1,6 @@
 var toWheel = $("#toWheel")
+const welcomeButton = document.getElementById('welcomebtn')
+const foodList = document.getElementById('list')
 
 console.log("script is linked")
 var APIkey = ""
@@ -13,3 +15,12 @@ fetch(targetURL)
 toWheel.on('click', () => {
     document.location = "./wheelPage.html"
 })
+
+welcomeButton.addEventListener('click', welcome)
+
+function welcome() {
+    console.log('ive been clicked')
+    welcomeButton.classList.add('hide')
+    foodList.classList.remove('hide')
+
+}
