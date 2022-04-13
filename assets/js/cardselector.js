@@ -11,7 +11,7 @@ function appendNewCard(parentCard){
 }
 // function for card shuffle
 function shuffleCards(){
-    let wordArray = [];
+    let wordArray = ["American", "Argentinian", "BBQ","Brazilian", "Burgers", "British","Burgers", "Caribbean","Cajun","Chinese","Ethipoian","Filipino","French","Greek","Hawaiian","Indian","Italian","Japanese","Korean","Korean BBQ","Lebanese","Mexican","Morocaan","Middle Eastern","Pasta","Persian","Pizza","Pho","Ramen","Salad","Sandwiches","Seafood","Soup","Tacos","Taiwanese","Thai","Vegan","Vegetarian","Vietnamese"];
     return _.shuffle(wordArray);
 }
 // fuction to create the card
