@@ -1,32 +1,15 @@
 
 // fuction to create the card
-function createCards(parentCard, shuffleCards){
-    let cardlist =[];
-    for (let i = 0; i<= 11; i++){
-        let newCard = appendNewCard(parentCard);
-        newCard.classList.add(shuffleCards);
-        var cardObjects ={
-            index: 1,
-            element: newCard,
-            imageclass: shuffleCards,
-        };
-        cardlist.push(cardObjects);
-    }
-    return cardlist;
-}
 
 
-// function for parent card element
-function appendNewCard(parentCard){
-    let card = document.createElement("div");
-    parentCard.appendChild(card);
-    card.className ="card";
-    let cardDown = document.createElement("div");
-    let cardUp = document.createElement("div");
-    cardDown.className ="card-down";
-    cardUp.className= "card-up";
-    return card;
-}
+var cardContainer = document.getElementById('card-container');
+var card = document.createElement('div');
+card.classList.add('card-down');
+card.textContent = 'card';
+cardContainer.appendChild(card);
+
+
+
 
 
 // function for card shuffle
