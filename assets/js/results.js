@@ -3,20 +3,16 @@ console.log("this is the results page")
 // fetch request
 // concatenate choice from wheel page into the targetURL
 
-// var apiKey = 'AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M'
-// var targetURL = "https://api.yelp.com/v3/businesses/search?term=restaurant&latitude=37.801&longitude=-122.248"
-// console.log(targetURL)
-// fetch(targetURL,{
-//   headers: {
-//     Authorization: "Bearer WyBp2EU9JSQ3n3pwgEarLQBKL0nJ92Kjsgqztt2cXzEYhZ6QM-PIIz0O0twiqjJ9QY_KXTQg9zRaFQEmo9r_YZ-bIyuolT6c02juqO8iNzOwUo8Klb9zkAHE53RXYnYx",
-//     
-//   }
-// })
-//   .then((resp)=>{
-//     console.log(resp)
-//     return resp.json()
-//   })
-//   .then(data => console.log(data))
+var apiKey = 'AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M'
+var targetURL = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M&input=restaurant&inputtype=textquery&fields=name&locationbias=ipbias"
+console.log(targetURL)
+fetch(targetURL,{
+})
+  .then((resp)=>{
+    console.log(resp)
+    return resp.json()
+  })
+  .then(data => console.log(data))
 
 //
 
