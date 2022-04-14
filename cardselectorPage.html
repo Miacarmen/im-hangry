@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="cardselector.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/cardselector.css">
 
     <title>Random Food Slector Option </title>
 </head>
@@ -25,9 +26,17 @@
         <div id="card-container">
             <!-- js will add div classes : card, card up and card down -->
         </div>
+
+        <button id="reshufflebtn" class="btn">Shuffle Again</button>
+        <button id="reselectbtn" class="btn">Select New Options</button>
+        <button id="resultbtn" class="btn">Get Results</button>
     </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type = "text/JavaScript" src = "https://underscorejs.org/underscore-min.js"></script>
-   
+   <script src="assets/js/main.js"></script>
     <script src = "./assets/js/cardselector.js"></script>
 </body>
 </html> 

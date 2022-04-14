@@ -47,6 +47,8 @@ $('#next').click(function(event) {
     window.location.href='cardselectorPage.html';
 });
 
+// add to local storage
+
 
 
 // on click of next button
