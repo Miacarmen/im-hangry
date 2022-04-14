@@ -1,7 +1,7 @@
 console.log("this is the results page")
 
 var restBut = $('#rest')
-var reciBut = $('#reci') 
+var reciBut = $('#reci')
 
 var row1 = $('#row1')
 var row2 = $('#row2')
@@ -11,84 +11,85 @@ var lat = ''
 var lon = ''
 
 var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
 };
 
 function success(pos) {
-  var crd = pos.coords;
+    var crd = pos.coords;
 
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  lat = crd.latitude
-  lon= crd.longitude
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-  saveLatLon(lat,lon)
+    console.log('Your current position is:');
+    console.log(`Latitude : ${crd.latitude}`);
+    lat = crd.latitude
+    lon = crd.longitude
+    console.log(`Longitude: ${crd.longitude}`);
+    console.log(`More or less ${crd.accuracy} meters.`);
+    saveLatLon(lat, lon)
 }
 
 function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
+    console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 navigator.geolocation.getCurrentPosition(success, error, options);
 
 //waits for geoLocation to be success
-function saveLatLon(x,y){
-  lat = x
-  lon = y
-  console.log(lat)
-  console.log(lon)
+function saveLatLon(x, y) {
+    lat = x
+    lon = y
+    console.log(lat)
+    console.log(lon)
 }
 
 // event listeners
-restBut.on('click', function(){
-  taFetch(lat,lon)
+restBut.on('click', function() {
+    taFetch(lat, lon)
 
 })
 
-reciBut.on('click', function(){
-  spoonFetch()
+reciBut.on('click', function() {
+    spoonFetch()
 })
 
-function spoonFetch(){
-var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=indian&addRecipeInformation=true&apiKey=446369fd8c0b4e3eb39992c76f883a83"
-fetch(targetURL)
-    .then(function(response) {
-        console.log(response)
-        return response.json()
-    })
-    .then(function(data){
-      console.log(data)
-      displayInfo(data)
-      localStorage.setItem('reciResp', JSON.stringify(data))
-    })
+function spoonFetch() {
+    var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=indian&addRecipeInformation=true&apiKey=446369fd8c0b4e3eb39992c76f883a83"
+    fetch(targetURL)
+        .then(function(response) {
+            console.log(response)
+            return response.json()
+        })
+        .then(function(data) {
+            console.log(data)
+            displayInfo(data)
+            localStorage.setItem('reciResp', JSON.stringify(data))
+        })
 }
 var reciResp = JSON.parse(localStorage.getItem('reciResp'))
 
 function displayInfo(obj) {
-var recipeTitle = obj.results[0].title
-console.log(recipeTitle)
-console.log(reciResp)
-  var newContainer = $('<div>').addClass("col s4")
-  var newCard = $('<div>').addClass('card blue-grey darken-1')
-  var newContent = $('<div>').addClass('card-content white-text')
-  var newTitle = $('<span>').addClass('card-title dark-grey-text')
-  newTitle.text(obj.results[0].title)
-  var newImgHolder = $('<div>').addClass('card-image')
-  var newPic = $('<img>').attr('src',obj.results[0].image)
-  var newLink = $('<a>').attr('href',obj.results[0].sourceUrl)
+    var recipeTitle = obj.results[0].title
+    console.log(recipeTitle)
+    console.log(reciResp)
+    var newContainer = $('<div>').addClass("col s4")
+    var newCard = $('<div>').addClass('card blue-grey darken-1')
+    var newContent = $('<div>').addClass('card-content white-text')
+    var newTitle = $('<span>').addClass('card-title dark-grey-text')
+    newTitle.text(obj.results[0].title)
+    var newImgHolder = $('<div>').addClass('card-image')
+    var newPic = $('<img>').attr('src', obj.results[0].image)
+    var newLink = $('<a>').attr('href', obj.results[0].sourceUrl)
 
-  newLink.append(newTitle)
-  newContent.append(newLink)
-  newCard.append(newImgHolder)
-  newCard.append(newContent)
-  newImgHolder.append(newPic)
-  newContainer.append(newCard)
-  row1.append(newContainer)
+    newLink.append(newTitle)
+    newContent.append(newLink)
+    newCard.append(newImgHolder)
+    newCard.append(newContent)
+    newImgHolder.append(newPic)
+    newContainer.append(newCard)
+    row1.append(newContainer)
 }
 
 displayInfo(reciResp)
+
 
 
 // when they click the restaurants button
@@ -100,26 +101,25 @@ displayInfo(reciResp)
 //    Rating
 //    Website
 
-function taFetch(x,y){
-const opts = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com',
-		'X-RapidAPI-Key': '644883e55amsh23c137fe60742eep16527bjsne5d9552c9387'
-	}
-};
+function taFetch(x, y) {
+    const opts = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com',
+            'X-RapidAPI-Key': '644883e55amsh23c137fe60742eep16527bjsne5d9552c9387'
+        }
+    };
 
-  var fetchURL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude='+x+'&longitude='+y+'&limit=30&currency=USD&distance=2&open_now=false&lunit=km&lang=en_US'
+    var fetchURL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=' + x + '&longitude=' + y + '&limit=30&currency=USD&distance=2&open_now=false&lunit=km&lang=en_US'
 
-fetch(fetchURL, opts)
-	.then(response => response.json())
-	.then(function(data){
-    console.log(data)
-    localStorage.setItem('restResp', JSON.stringify(data))
-  })
-	.catch(err => console.error(err));
+    fetch(fetchURL, opts)
+        .then(response => response.json())
+        .then(function(data) {
+            console.log(data)
+            localStorage.setItem('restResp', JSON.stringify(data))
+        })
+        .catch(err => console.error(err));
 
 }
 var restResp = JSON.parse(localStorage.getItem('restResp'))
 console.log(restResp)
-
