@@ -23,7 +23,6 @@ toWheel.on('click', () => {
 
 // update cards with array items
 welcomeButton.addEventListener('click', welcome)
-    // when 'get started' buttons gets clicked, food options appear after
 foodList.classList.add('hide');
 
 function welcome() {
