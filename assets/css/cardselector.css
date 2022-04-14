@@ -27,3 +27,11 @@
 .flipped .card-up{
     transform: rotateY(180deg);
 }
+.image-1{
+background-image: url(pics/Myproject.png);
+
+}
+
+.image-2{
+    background-image: url(pics/red-hangry.png);
+}
