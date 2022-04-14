@@ -12,7 +12,8 @@
     transition-duration: .3s;
 }
 .card-down{
-    background-image: url(pics/red-hangry.png);
+    background-color: red;
+    /* background-image: url(pics/red-hangry.png); */
     border-radius: 5px;
     transition-duration: .3s;
 }
@@ -27,11 +28,13 @@
 .flipped .card-up{
     transform: rotateY(180deg);
 }
-.image-1 .card-up{
+
+
+/* .image-1 .card-up{
 background-image: url(pics/Myproject.png);
 
 }
 
 .image-2 .card-up{
     background-image: url(pics/red-hangry.png);
-}
+} */

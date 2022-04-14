@@ -1,4 +1,3 @@
-
 const welcomeButton = document.getElementById('welcomebtn');
 const foodList = document.getElementById('list');
 const nextButton = document.getElementById('next');
@@ -47,6 +46,8 @@ $('#next').click(function(event) {
     console.log(selected);
     window.location.href='cardselectorPage.html';
 });
+
+// add to local storage
 
 
 
