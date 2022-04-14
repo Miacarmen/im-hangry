@@ -73,6 +73,8 @@ h1 {
     border-radius: 5px;
     background-color: #283618;
     color: #FEFAE0;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .buttonHolder{
@@ -88,10 +90,13 @@ h1 {
     border-radius: 5px;
     background-color: #283618;
     color: #FEFAE0;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .welcomebtn:hover {
-    background-color: #566b0f;
+    background-color: #FEFAE0;
+    color: #283618;
 }
 
 
