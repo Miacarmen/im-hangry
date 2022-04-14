@@ -13,3 +13,21 @@ fetch(targetURL)
 toWheel.on('click', () => {
     document.location = "./wheelPage.html"
 })
+
+
+// add event listener for on click of checkboxes
+
+// add event listener for status checked for form inputs
+
+var selected = [];
+$('#isChecked input[type="checkbox"]').each(function() {
+    if($(this).is('checked')) {
+        selected.push($(this).attr('checked'));
+    }
+})
+
+
+ 
+// grab updated selected array
+
+// update cards with array items
