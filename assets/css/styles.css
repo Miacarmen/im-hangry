@@ -1,7 +1,39 @@
-* {
-    font-family: 'Luckiest Guy', cursive;
-    background-color: #606C38;
-}
+
+ body {
+     font-family: 'Luckiest Guy', cursive;
+     background-color: #606C38;
+ }
+ 
+ .logo {
+     display: flex;
+     margin-left: 40%;
+ }
+ 
+ h1 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /* background-color: darkkhaki; */
+     padding: 10px;
+     margin: 5%;
+     color: #FEFAE0;
+     font-size: 100px;
+ }
+ 
+ .list {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     flex-direction: row;
+     flex: 33.33%;
+     margin: 50px;
+ }
+ 
+
+ label {
+     margin-left: 30px;
+ }
 
 .logo {
     display: flex;
