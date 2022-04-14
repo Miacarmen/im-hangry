@@ -9,7 +9,9 @@ for (let i = 0; i < cuisine.length; i++) {
   card.textContent = "card";
   cardContainer.appendChild(card);
 }
-
+$(document).ready(function() {
+    $(`<img src='cardimage.png'>`).appendTo('card-down');
+})
 
 
 

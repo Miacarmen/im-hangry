@@ -33,7 +33,7 @@ h3 {
 }
 .card-down{
     background-color: #FEFAE0;
-    /* background-image: url(pics/red-hangry.png); */
+    /* background-image: url(./assets/pics/cardimage.png); */
     border-radius: 5px;
     transition-duration: .3s;
 }
