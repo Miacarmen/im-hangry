@@ -17,26 +17,22 @@ toWheel.on('click', () => {
 })
 
 
-<<<<<<< HEAD
-// "get started" button gets displayed first and when clicked, contents of food list will appear and button will hide untill refreshed"
-=======
 // add event listener for on click of checkboxes
 
 // add event listener for status checked for form inputs
 
 var selected = [];
 $('#isChecked input[type="checkbox"]').each(function() {
-    if($(this).is('checked')) {
+    if ($(this).is('checked')) {
         selected.push($(this).attr('checked'));
     }
 })
 
 
- 
+
 // grab updated selected array
 
 // update cards with array items
->>>>>>> e598f07fff277be2882c3072b4d786fbea96c407
 welcomeButton.addEventListener('click', welcome)
     // when 'get started' buttons gets clicked, food options appear after
 foodList.classList.add('hide');
