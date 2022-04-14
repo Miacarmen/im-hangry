@@ -1,5 +1,6 @@
 
 // fuction to create the card
+
 function createCards(parentCard, shuffleCards){
     let cardlist =[];
     for (let i = 0; i<= 11; i++){
