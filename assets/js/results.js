@@ -1,5 +1,8 @@
 console.log("this is the results page")
 
+var restBut = $('#rest')
+var reciBut = $('#reci') 
+
 //geoLocation to get latLon of user
 var lat = ''
 var lon = ''
@@ -35,6 +38,14 @@ function saveLatLon(x,y){
   console.log(lon)
 }
 
+// event listeners
+restBut.on('click', function(){
+  taFetch(lat,lon)
+})
+
+reciBut.on('click', function(){
+  spoonFetch()
+})
 
 function spoonFetch(){
 var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=indian&apiKey=446369fd8c0b4e3eb39992c76f883a83"
