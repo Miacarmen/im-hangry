@@ -1,4 +1,4 @@
-var toWheel = $("#toWheel");
+
 const welcomeButton = document.getElementById('welcomebtn');
 const foodList = document.getElementById('list');
 const nextButton = document.getElementById('next');
@@ -18,22 +18,20 @@ console.log("script is linked")
 // })
 
 
-
-
 // grab updated selected array
 
 // update cards with array items
 
 // 
-welcomeButton.addEventListener('click', welcome)
+welcomeButton.addEventListener('click', welcome);
 foodList.classList.add('hide');
 nextButton.classList.add('hide');
 
 function welcome() {
-    console.log('ive been clicked')
-    welcomeButton.classList.add('hide')
-    foodList.classList.remove('hide')
-    nextButton.classList.remove('hide')
+    console.log('ive been clicked');
+    welcomeButton.classList.add('hide');
+    foodList.classList.remove('hide');
+    nextButton.classList.remove('hide');
 }
 
 
