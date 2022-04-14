@@ -1,0 +1,9 @@
+:root{
+    --card-width: 125px;
+    --card-height: 175px;
+}
+.card-down{
+    background-image: url(pics/red-hangry.png);
+    border-radius: 5px;
+    transition-duration: .3s;
+}
