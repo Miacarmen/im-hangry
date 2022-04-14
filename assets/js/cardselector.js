@@ -2,6 +2,23 @@
 // fuction to create the card
 
 
+function createCards(parentCard, shuffleCards){
+    let cardlist =[];
+    for (let i = 0; i<= 11; i++){
+        let newCard = appendNewCard(parentCard);
+        newCard.classList.add(shuffleCards);
+        var cardObjects ={
+            index: 1,
+            element: newCard,
+            imageclass: shuffleCards,
+        };
+        cardlist.push(cardObjects);
+    }
+    return cardlist;
+}
+
+
+
 var cardContainer = document.getElementById('card-container');
 var card = document.createElement('div');
 card.classList.add('card-down');
