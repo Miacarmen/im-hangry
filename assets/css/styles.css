@@ -85,3 +85,12 @@
  }
 
  /* change checkbox color on click */
+
+
+ .welcomebtn:hover {
+    background-color: #566b0f;
+}
+
+.nextbtn:hover {
+    background-color: #566b0f;
+}

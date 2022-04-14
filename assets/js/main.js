@@ -1,20 +1,21 @@
-var toWheel = $("#toWheel")
-const welcomeButton = document.getElementById('welcomebtn')
-const foodList = document.getElementById('list')
+var toWheel = $("#toWheel");
+const welcomeButton = document.getElementById('welcomebtn');
+const foodList = document.getElementById('list');
+const nextButton = document.getElementById('nextbtn');
 
 console.log("script is linked")
-var APIkey = ""
-var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=indian&apiKey=446369fd8c0b4e3eb39992c76f883a83"
-fetch(targetURL)
-    .then(function(response) {
-        console.log(response)
-        return response.json()
-    })
-    .then(data => console.log(data))
-
-toWheel.on('click', () => {
-    document.location = "./wheelPage.html"
-})
+// var APIkey = ""
+// var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=indian&apiKey=446369fd8c0b4e3eb39992c76f883a83"
+// fetch(targetURL)
+//     .then(function(response) {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then(data => console.log(data))
+//
+// toWheel.on('click', () => {
+//     document.location = "./wheelPage.html"
+// })
 
 
 
@@ -22,15 +23,20 @@ toWheel.on('click', () => {
 // grab updated selected array
 
 // update cards with array items
+
+// 
 welcomeButton.addEventListener('click', welcome)
 foodList.classList.add('hide');
+nextButton.classList.add('hide');
 
 function welcome() {
     console.log('ive been clicked')
     welcomeButton.classList.add('hide')
     foodList.classList.remove('hide')
-
+    nextButton.classList.remove('hide')
 }
+
+
 
 
 // add event listener for on click of checkboxes
@@ -47,7 +53,7 @@ $('#next').click(function(event) {
     $('.check').each(function() {
         // if checkbox is checked
         console.log(this.checked);
-        if(this.checked) {
+        if (this.checked) {
             console.log($(this).val());
             selected.push($(this).val());
         }
@@ -55,6 +61,7 @@ $('#next').click(function(event) {
     console.log(selected);
     // window.location.href='cardselectorPage.html';
 });
+<<<<<<< HEAD
 
 
 
@@ -68,3 +75,5 @@ $('#next').click(function(event) {
 
 // on click of random card
 // pull api 
+=======
+>>>>>>> 4cf84d7cac7ce1d128702b6213e0a181b13cf4d8
