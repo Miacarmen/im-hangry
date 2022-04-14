@@ -37,3 +37,49 @@ background-image: url(pics/Myproject.png);
 .image-2 .card-up{
     background-image: url(pics/red-hangry.png);
 } */
+
+
+#reshufflebtn {
+    text-align: center;
+    align-self: center;
+    border-radius: 5px;
+    background-color: #283618;
+    color: #FEFAE0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#reshufflebtn:hover {
+    background-color: #FEFAE0;
+    color: #283618;
+}
+
+#reselectbtn {
+    text-align: center;
+    align-self: center;
+    border-radius: 5px;
+    background-color: #283618;
+    color: #FEFAE0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#reselectbtn:hover {
+    background-color: #FEFAE0;
+    color: #283618;
+}
+
+#resultbtn {
+    text-align: center;
+    align-self: center;
+    border-radius: 5px;
+    background-color: #283618;
+    color: #FEFAE0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#resultbtn:hover {
+    background-color: #FEFAE0;
+    color: #283618;
+}
