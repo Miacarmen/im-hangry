@@ -3,19 +3,18 @@ console.log("this is the results page")
 // fetch request
 // concatenate choice from wheel page into the targetURL
 
-var apiKey = 'AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M'
-var targetURL = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M&input=restaurant&inputtype=textquery&fields=name&locationbias=ipbias"
-console.log(targetURL)
-fetch(targetURL,{
-})
-  .then((resp)=>{
-    console.log(resp)
-    return resp.json()
-  })
-  .then(data => console.log(data))
-
+// var apiKey = 'AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M'
+// var targetURL = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M&input=restaurant&inputtype=textquery&fields=name&locationbias=ipbias"
+// console.log(targetURL)
+// fetch(targetURL,{
+// })
+//   .then((resp)=>{
+//     console.log(resp)
+//     return resp.json()
+//   })
+//   .then(data => console.log(data))
 //
-
+//
 var lat = ''
 var lon = ''
 var options = {
@@ -35,6 +34,7 @@ function success(pos) {
   console.log(`More or less ${crd.accuracy} meters.`);
   console.log(lat)
   console.log(lon)
+  fetchByLtLn(lat,lon)
 }
 
 function error(err) {
@@ -42,3 +42,25 @@ function error(err) {
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
+
+
+const opts = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com',
+		'X-RapidAPI-Key': '644883e55amsh23c137fe60742eep16527bjsne5d9552c9387'
+	}
+};
+console.log(lat)
+console.log(lon)
+
+function fetchByLtLn(x,y){
+  var fetchURL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude='+x+'&longitude='+y+'&limit=30&currency=USD&distance=2&open_now=false&lunit=km&lang=en_US'
+
+fetch(fetchURL, opts)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+}
+
