@@ -8,10 +8,11 @@ for (let i = 0; i < cuisine.length; i++) {
   card.classList.add("card-down");
   card.textContent = "card";
   cardContainer.appendChild(card);
+//   adding background image to card
+//   $(`<img src='assets/pics/cardimage.png'>`).appendTo("card-container");
+//   $(card).attr("src","assets/pics/cardimage.png");
+
 }
-$(document).ready(function() {
-    $(`<img src='cardimage.png'>`).appendTo('card-down');
-})
 
 
 
@@ -30,24 +31,12 @@ function shuffleCards() {
 }
 
 // change to jquery onClick to flip card
-function cardFlipWhenClicked(cardObjects) {
-  cardObjects.element = function () {
-    // add event listener here for on  click response
-    if (cardObjects.element.classList.contains("flipped")) {
-      return;
-    }
-    cardObjects.element.classList.add("flipped");
-  };
-}
+$('.card-down').click(function(){
+    $(this).toggleClass('flipped');
+    console.log("flip");
+  
+});
 
-// set up cards
-// let cardObjects =
-//     createCards(document.getElementById("card-container"), shuffleCards());
-// if (cardObjects !=null){
-//     for (let i = 0; i < cardObjects.length; i++){
-//         cardFlipWhenClicked(cardObjects);
-//     }
-// }
 
 // add a re-shuffle button
 $("#reshufflebtn").click(function (event) {
