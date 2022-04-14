@@ -1,4 +1,6 @@
 var toWheel = $("#toWheel")
+const welcomeButton = document.getElementById('welcomebtn')
+const foodList = document.getElementById('list')
 
 console.log("script is linked")
 var APIkey = ""
@@ -31,3 +33,11 @@ $('#isChecked input[type="checkbox"]').each(function() {
 // grab updated selected array
 
 // update cards with array items
+welcomeButton.addEventListener('click', welcome)
+
+function welcome() {
+    console.log('ive been clicked')
+    welcomeButton.classList.add('hide')
+    foodList.classList.remove('hide')
+
+}
