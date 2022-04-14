@@ -26,10 +26,15 @@
      flex-wrap: wrap;
      flex-direction: row;
      flex: 33.33%;
+     margin: 50px;
  }
  
  span {
      color: #FEFAE0;
+ }
+
+ label {
+     margin-left: 30px;
  }
  
  .hide {
@@ -37,14 +42,46 @@
  }
  
  .welcomebtn {
+     justify-content: center;
+     align-content: center;
      text-align: center;
      display: grid;
      margin: auto;
-     margin-top: 2%;
+     padding: 30px;
      border-radius: 5px;
+     font-size: 18px;
+     font-weight: bold;
+     
  }
  
  .welcomebtn {
      background-color: #283618;
      color: #FEFAE0;
  }
+
+ #next {
+     background-color: #283618;
+     color: #FEFAE0;
+     font-size: 18px;
+     font-weight: bold;
+     border-style: none;
+     border-radius: 5px;
+     display: grid;
+     justify-content: center;
+     align-content: center;
+     text-align: center;
+     margin: auto;
+     padding: 13px;
+     
+ }
+
+ .nextbtn {
+     margin-left: 35px;
+ }
+
+/* change checkbox color on hover */
+ checkbox:hover {
+     background-color: ghostwhite;
+ }
+
+ /* change checkbox color on click */
