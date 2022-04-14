@@ -36,6 +36,8 @@
  label {
      margin-left: 30px;
  }
+
+
  
  .hide {
      display: none;
@@ -70,27 +72,25 @@
      justify-content: center;
      align-content: center;
      text-align: center;
-     margin: auto;
+     margin-left: 35px;
      padding: 13px;
-     
+     cursor: pointer;
  }
 
- .nextbtn {
-     margin-left: 35px;
- }
+ 
 
 /* change checkbox color on hover */
- checkbox:hover {
-     background-color: ghostwhite;
- }
+ 
 
  /* change checkbox color on click */
 
 
  .welcomebtn:hover {
-    background-color: #566b0f;
+    background-color: #FEFAE0;
+    color: #566b0f;
 }
 
-.nextbtn:hover {
-    background-color: #566b0f;
+#nextbtn:hover {
+    color: #566b0f;
+    background-color: #FEFAE0;
 }

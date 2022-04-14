@@ -61,7 +61,6 @@ $('#next').click(function(event) {
     console.log(selected);
     // window.location.href='cardselectorPage.html';
 });
-<<<<<<< HEAD
 
 
 
@@ -75,5 +74,3 @@ $('#next').click(function(event) {
 
 // on click of random card
 // pull api 
-=======
->>>>>>> 4cf84d7cac7ce1d128702b6213e0a181b13cf4d8
