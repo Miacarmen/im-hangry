@@ -3,12 +3,13 @@
     --card-height: 175px;
 }
 .card-down, .card-up{
-    position: absolute;
+
     width: 125px;
     height: 175px;
     backface-visibility: hidden;
     border-radius: 5px;
     transition-duration: .3s;
+    margin: auto;
 }
 .card-down{
     background-color: red;
