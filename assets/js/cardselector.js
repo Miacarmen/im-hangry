@@ -12,12 +12,8 @@ function appendNewCard(parentCard){
 // function for card shuffle
 function shuffleCards(){
     // have selection of food come here to shuffle in cards
-<<<<<<< HEAD
-    let wordArray =[];
-=======
     let wordArray = [];
     // let wordArray =["image-1","image-1","image-2","image-2"];
->>>>>>> 73cee0bda22a6f3c759cc19d5b3763af4a4374ce
     // let wordArray = ["American", "Argentinian", "BBQ","Brazilian", "Burgers", "British","Burgers", "Caribbean","Cajun","Chinese","Ethipoian","Filipino","French","Greek","Hawaiian","Indian","Italian","Japanese","Korean","Korean BBQ","Lebanese","Mexican","Morocaan","Middle Eastern","Pasta","Persian","Pizza","Pho","Ramen","Salad","Sandwiches","Seafood","Soup","Tacos","Taiwanese","Thai","Vegan","Vegetarian","Vietnamese"];
     for (var i = wordArray.length -1; i >0; i--){
         var j =Math.floor(Math.random() * (i+1));
