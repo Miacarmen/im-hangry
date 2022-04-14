@@ -38,21 +38,21 @@ function welcome() {
 
 // add event listener for status checked for form inputs
 
+
 var selected = [];
-$('.check input[type="checkbox"]').each(function() {
-    // if checkbox is checked
-    if($(this).is('checked')) {
-        selected.push($(this).attr('checked'));
-    }
-})
-
-console.log(selected);
-
-
 // event listener for next button
 // update cards with selected array
 $('#next').click(function(event) {
     event.preventDefault();
     console.log('button clicked');
-    window.location.href='cardselectorPage.html';
+    $('.check').each(function() {
+        // if checkbox is checked
+        console.log(this.checked);
+        if(this.checked) {
+            console.log($(this).val());
+            selected.push($(this).val());
+        }
+    })
+    console.log(selected);
+    // window.location.href='cardselectorPage.html';
 });
