@@ -1,46 +1,36 @@
-const welcomeButton = document.getElementById('welcomebtn');
-const foodList = document.getElementById('list');
-const nextButton = document.getElementById('next');
+console.log('script is linked');
 
-console.log("script is linked")
+var foodList = $('#list');
+var welcomeButton = $('#welcomebtn');
+var nextButton = $('#next');
 
 
-// grab updated selected array
-
-// update cards with array items
-
-// 
-welcomeButton.addEventListener('click', welcome);
-foodList.classList.add('hide');
-nextButton.classList.add('hide');
-
-function welcome() {
-    console.log('ive been clicked');
-    welcomeButton.classList.add('hide');
-    foodList.classList.remove('hide');
-    nextButton.classList.remove('hide');
-}
+welcomeButton.click(function(event) {
+    // event.preventDefault();
+    console.log('button clicked');
+    welcomeButton.hide();
+    foodList.show();
+    nextButton.show();
+});
 
 
 
 
-// add event listener for on click of checkboxes
-
-// add event listener for status checked for form inputs
-
-
+// array to be populated with selected choices
 var selected = [];
 // event listener for next button
-// update cards with selected array
-$('#next').click(function(event) {
+nextButton.click(function(event) {
     event.preventDefault();
     console.log('button clicked');
+    // get status of selected checkboxes
     $('.check').each(function() {
         // if checkbox is checked
         console.log(this.checked);
         if (this.checked) {
             console.log($(this).val());
+            // push selected boxes to array
             selected.push($(this).val());
+            
         }
     })
     console.log(selected);
