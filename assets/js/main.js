@@ -17,17 +17,6 @@ toWheel.on('click', () => {
 })
 
 
-// add event listener for on click of checkboxes
-
-// add event listener for status checked for form inputs
-
-var selected = [];
-$('#isChecked input[type="checkbox"]').each(function() {
-    if ($(this).is('checked')) {
-        selected.push($(this).attr('checked'));
-    }
-})
-
 
 
 // grab updated selected array
@@ -42,3 +31,27 @@ function welcome() {
     foodList.classList.remove('hide')
 
 }
+
+
+// add event listener for on click of checkboxes
+
+// add event listener for status checked for form inputs
+
+
+var selected = [];
+// event listener for next button
+// update cards with selected array
+$('#next').click(function(event) {
+    event.preventDefault();
+    console.log('button clicked');
+    $('.check').each(function() {
+        // if checkbox is checked
+        console.log(this.checked);
+        if(this.checked) {
+            console.log($(this).val());
+            selected.push($(this).val());
+        }
+    })
+    console.log(selected);
+    // window.location.href='cardselectorPage.html';
+});
