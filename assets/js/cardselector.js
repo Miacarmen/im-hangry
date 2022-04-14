@@ -2,21 +2,6 @@
 // fuction to create the card
 
 
-// function createCards(parentCard, shuffleCards){
-//     let cardlist =[];
-//     for (let i = 0; i<= 11; i++){
-//         let newCard = appendNewCard(parentCard);
-//         newCard.classList.add(shuffleCards);
-//         var cardObjects ={
-//             index: 1,
-//             element: newCard,
-//             imageclass: shuffleCards,
-//         };
-//         cardlist.push(cardObjects);
-//     }
-//     return cardlist;
-// }
-
 
 
 var cardContainer = document.getElementById('card-container');
@@ -61,13 +46,13 @@ function cardFlipWhenClicked(cardObjects){
 
 
 // set up cards
-let cardObjects =
-    createCards(document.getElementById("card-container"), shuffleCards());
-if (cardObjects !=null){
-    for (let i = 0; i < cardObjects.length; i++){
-        cardFlipWhenClicked(cardObjects);
-    }
-}
+// let cardObjects =
+//     createCards(document.getElementById("card-container"), shuffleCards());
+// if (cardObjects !=null){
+//     for (let i = 0; i < cardObjects.length; i++){
+//         cardFlipWhenClicked(cardObjects);
+//     }
+// }
 
 
 
@@ -87,7 +72,7 @@ $('#reselectbtn').click(function(event) {
 });
 
 // add on click event listener to resultbtn
-$('#result').click(function(event) {
+$('#resultbtn').click(function(event) {
     event.preventDefault();
     console.log('button clicked');
     // link to resultspage.html
