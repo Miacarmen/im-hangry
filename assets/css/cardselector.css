@@ -2,6 +2,17 @@
     --card-width: 125px;
     --card-height: 175px;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color:  #606C38;
+}
+
+h3 {
+    color: #FEFAE0;
+}
+
 .card-down, .card-up{
     position: absolute;
     width: 125px;
