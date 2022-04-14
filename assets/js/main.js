@@ -1,4 +1,3 @@
-
 const welcomeButton = document.getElementById('welcomebtn');
 const foodList = document.getElementById('list');
 const nextButton = document.getElementById('next');
