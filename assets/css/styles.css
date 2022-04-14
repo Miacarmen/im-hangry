@@ -12,7 +12,6 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     /* background-color: darkkhaki; */
      padding: 10px;
      margin: 5%;
      color: #FEFAE0;
@@ -42,9 +41,24 @@
      margin: auto;
      margin-top: 2%;
      border-radius: 5px;
- }
- 
- .welcomebtn {
      background-color: #283618;
      color: #FEFAE0;
+ }
+ 
+ .nextbtn {
+     text-align: center;
+     display: grid;
+     margin: auto;
+     margin-top: 2%;
+     border-radius: 5px;
+     background-color: #283618;
+     color: #FEFAE0;
+ }
+ 
+ .welcomebtn:hover {
+     background-color: #566b0f;
+ }
+ 
+ .nextbtn:hover {
+     background-color: #566b0f;
  }
