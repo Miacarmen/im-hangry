@@ -61,6 +61,11 @@ h1 {
   margin: 1%;
 }
 
+span {
+    margin-bottom: 10px;
+    float: left;
+}
+
 .hide {
     display: none;
 }
