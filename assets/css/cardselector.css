@@ -11,11 +11,19 @@
 }
 
 h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 5%;
     color: #FEFAE0;
+    font-size: 50px;
 }
 
-.card-down, .card-up{
 
+
+.card-down, .card-up{
+   
     width: 125px;
     height: 175px;
     backface-visibility: hidden;
@@ -24,7 +32,7 @@ h3 {
     margin: auto;
 }
 .card-down{
-    background-color: red;
+    background-color: #FEFAE0;
     /* background-image: url(pics/red-hangry.png); */
     border-radius: 5px;
     transition-duration: .3s;
@@ -52,6 +60,21 @@ background-image: url(pics/Myproject.png);
 } */
 
 
+
+
+
+
+
+
+/* control buttons */
+
+.btn-group button {    
+    display: flex;
+    float: left;
+    margin-left: 10px;
+}
+
+
 #reshufflebtn {
     text-align: center;
     align-self: center;
@@ -60,6 +83,7 @@ background-image: url(pics/Myproject.png);
     color: #FEFAE0;
     font-weight: bold;
     font-size: 15px;
+    cursor: pointer;
 }
 
 #reshufflebtn:hover {
@@ -75,6 +99,7 @@ background-image: url(pics/Myproject.png);
     color: #FEFAE0;
     font-weight: bold;
     font-size: 15px;
+    cursor: pointer;
 }
 
 #reselectbtn:hover {
@@ -90,6 +115,7 @@ background-image: url(pics/Myproject.png);
     color: #FEFAE0;
     font-weight: bold;
     font-size: 15px;
+    cursor: pointer;
 }
 
 #resultbtn:hover {
