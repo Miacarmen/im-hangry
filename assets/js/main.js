@@ -16,7 +16,11 @@ toWheel.on('click', () => {
     document.location = "./wheelPage.html"
 })
 
+
+// "get started" button gets displayed first and when clicked, contents of food list will appear and button will hide untill refreshed"
 welcomeButton.addEventListener('click', welcome)
+    // when 'get started' buttons gets clicked, food options appear after
+foodList.classList.add('hide');
 
 function welcome() {
     console.log('ive been clicked')
