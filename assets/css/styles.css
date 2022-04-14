@@ -1,50 +1,64 @@
- * {
-     font-family: 'Luckiest Guy', cursive;
-     background-color: #606C38;
- }
- 
- .logo {
-     display: flex;
-     margin-left: 40%;
- }
- 
- h1 {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     /* background-color: darkkhaki; */
-     padding: 10px;
-     margin: 5%;
-     color: #FEFAE0;
-     font-size: 100px;
- }
- 
- .list {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-wrap: wrap;
-     flex-direction: row;
-     flex: 33.33%;
- }
- 
- span {
-     color: #FEFAE0;
- }
- 
- .hide {
-     display: none;
- }
- 
- .welcomebtn {
-     text-align: center;
-     display: grid;
-     margin: auto;
-     margin-top: 2%;
-     border-radius: 5px;
- }
- 
- .welcomebtn {
-     background-color: #283618;
-     color: #FEFAE0;
- }
+* {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #606C38;
+}
+
+.logo {
+    display: flex;
+    margin-left: 40%;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 5%;
+    color: #FEFAE0;
+    font-size: 100px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 33.33%;
+}
+
+span {
+    color: #FEFAE0;
+}
+
+.hide {
+    display: none;
+}
+
+.welcomebtn {
+    text-align: center;
+    display: grid;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: #283618;
+    color: #FEFAE0;
+}
+
+.nextbtn {
+    text-align: center;
+    display: grid;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: #283618;
+    color: #FEFAE0;
+}
+
+.welcomebtn:hover {
+    background-color: #566b0f;
+}
+
+.nextbtn:hover {
+    background-color: #566b0f;
+}
