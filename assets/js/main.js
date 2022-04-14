@@ -34,6 +34,7 @@ nextButton.click(function(event) {
         }
     })
     console.log(selected);
+    localStorage.setItem('selected', JSON.stringify(selected));
     window.location.href='cardselectorPage.html';
 });
 
