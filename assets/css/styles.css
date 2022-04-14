@@ -13,10 +13,17 @@ h1 {
     justify-content: center;
     /* background-color: darkkhaki; */
     padding: 10px;
-    margin: 0px;
+    margin: 5%;
 }
 
-.list {}
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 33.33%;
+}
 
 .hide {
     display: none;
@@ -26,5 +33,6 @@ h1 {
     text-align: center;
     display: grid;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
+    border-radius: 5px;
 }
