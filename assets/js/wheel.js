@@ -13,17 +13,10 @@ console.log("this is the random picker page");
 
 
 
-// add event listener for status checked for form inputs
-
-$(document).ready(function() {
-    var checkboxes = $('input[type=checkbox]');
-    $(checkboxes).click(function() {
-        $('.check').attr()
-    })
-});
 
 
 
+// console.log(checkboxes);
 
 
 // checkboxes.forEach(function(checkbox) {
@@ -37,11 +30,7 @@ $(document).ready(function() {
 
 
 
-// Function to create wheel
-// var foodPicker = function() {
-//         // grab wheel from html
-//         const wheel = document.querySelector('.wheel');
-//         const spinButton = document.querySelector('#spinBtn');
+
 
 
 // spin button event listener
@@ -56,30 +45,3 @@ $(document).ready(function() {
 
 
 
-
-// randomly stop
-// fisher-yates
-// Math.random(Math.floor()) to randomly stop
-// var randomize = function() {
-
-// };
-
-
-// function to display selected food
-// overlay, food name, icon, button to see recipes
-
-
-
-
-
-
-
-// closing brackets for container function
-
-
-
-// pulls recipies for selected cuisine using API
-// user selects receipe, list of ingredients displayed
-
-// make button to display grocery stores to buy ingredients
-// fetches google maps API
