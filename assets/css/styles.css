@@ -24,11 +24,16 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    flex: 33.33%;
+    margin: 2%;
 }
 
-span {
+.list span {
     color: #FEFAE0;
+    margin-right: 10%
+}
+
+.list input {
+  margin: 1%;
 }
 
 .hide {
