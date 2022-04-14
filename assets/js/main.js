@@ -23,17 +23,19 @@ toWheel.on('click', () => {
 
 var selected = [];
 $('#isChecked input[type="checkbox"]').each(function() {
-    if($(this).is('checked')) {
+    if ($(this).is('checked')) {
         selected.push($(this).attr('checked'));
     }
 })
 
 
- 
+
 // grab updated selected array
 
 // update cards with array items
 welcomeButton.addEventListener('click', welcome)
+    // when 'get started' buttons gets clicked, food options appear after
+foodList.classList.add('hide');
 
 function welcome() {
     console.log('ive been clicked')
