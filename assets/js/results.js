@@ -41,6 +41,7 @@ function saveLatLon(x,y){
 // event listeners
 restBut.on('click', function(){
   taFetch(lat,lon)
+
 })
 
 reciBut.on('click', function(){
@@ -54,9 +55,14 @@ fetch(targetURL)
         console.log(response)
         return response.json()
     })
-    .then(data => console.log(data))
+    .then(function(data){
+      console.log(data)
+      localStorage.setItem('reciResp', JSON.stringify(data))
+    })
 }
 
+var reciResp = JSON.parse(localStorage.getItem('reciResp'))
+console.log(reciResp)
 
 
 function taFetch(x,y){
@@ -72,8 +78,13 @@ const opts = {
 
 fetch(fetchURL, opts)
 	.then(response => response.json())
-	.then(response => console.log(response))
+	.then(function(data){
+    console.log(data)
+    localStorage.setItem('restResp', JSON.stringify(data))
+  })
 	.catch(err => console.error(err));
 
 }
+var restResp = JSON.parse(localStorage.getItem('restResp'))
+console.log(restResp)
 
