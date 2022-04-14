@@ -1,4 +1,4 @@
-var toWheel = $("#toWheel");
+// var toWheel = $("#toWheel");
 const welcomeButton = document.getElementById('welcomebtn');
 const foodList = document.getElementById('list');
 const nextButton = document.getElementById('next');
@@ -16,7 +16,7 @@ console.log("script is linked")
 // update cards with array items
 
 // 
-welcomeButton.addEventListener('click', welcome)
+welcomeButton.addEventListener('click', welcome);
 foodList.classList.add('hide');
 nextButton.classList.add('hide');
 
