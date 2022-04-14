@@ -39,20 +39,16 @@ function cardFlipWhenClicked(cardObjects) {
   };
 }
 
-// set up cards
-// let cardObjects =
-//     createCards(document.getElementById("card-container"), shuffleCards());
-// if (cardObjects !=null){
-//     for (let i = 0; i < cardObjects.length; i++){
-//         cardFlipWhenClicked(cardObjects);
-//     }
-// }
+
+
+
 
 // add a re-shuffle button
 $("#reshufflebtn").click(function (event) {
   event.preventDefault();
   console.log("button clicked");
   // invoke shuffle function (using jquery)
+  
 });
 
 // add a reselect button
