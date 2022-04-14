@@ -59,5 +59,18 @@ $('#next').click(function(event) {
         }
     })
     console.log(selected);
-    // window.location.href='cardselectorPage.html';
+    window.location.href='cardselectorPage.html';
 });
+
+
+
+// on click of next button
+// update cards with list of selected foods
+
+// hide list screen
+// display card screen
+
+// CARDSELECTOR.js HERE
+
+// on click of random card
+// pull api 
