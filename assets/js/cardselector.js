@@ -2,7 +2,7 @@ var stored = localStorage.getItem("selected");
 console.log(stored);
 var cuisine = JSON.parse(stored);
 
-for (let i = 0; i <= cuisine.length; i++) {
+for (let i = 0; i < cuisine.length; i++) {
   var cardContainer = document.getElementById("card-container");
   var card = document.createElement("div");
   card.classList.add("card-down");
