@@ -29,3 +29,26 @@ function createCards(parentCard, shuffleCards){
     }
     return cardlist;
 }
+
+function incrementCounter(counterName, parentCard){
+    if (counters[counterName] == undefined){
+        counters[counterName] = 0;
+    }
+    counters[counterName]++;
+    parentCard.innerHTML = counters[counterName];
+}
+function cardFlipWhenClicked(cardObjects){
+    cardObjects.element.onclick = function (){
+        if (cardObjects.element.classList.contains("flipped")){
+            return;
+        }
+        cardObjects.element.classList.add("flipped");
+    }
+}
+
+// set up cards
+let cardObjects =
+    createCards(document.getElementById("card-container"), shuffleCards());
+if (cardObjects !=null){
+    
+}
