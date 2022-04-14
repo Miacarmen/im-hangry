@@ -18,11 +18,13 @@ toWheel.on('click', () => {
 
 
 
- 
+
 // grab updated selected array
 
 // update cards with array items
 welcomeButton.addEventListener('click', welcome)
+    // when 'get started' buttons gets clicked, food options appear after
+foodList.classList.add('hide');
 
 function welcome() {
     console.log('ive been clicked')
@@ -53,4 +55,4 @@ $('#next').click(function(event) {
     event.preventDefault();
     console.log('button clicked');
     window.location.href='cardselectorPage.html';
-})
+});
