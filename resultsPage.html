@@ -8,12 +8,20 @@
   </head>
   <body>
     <h1>Here are your Recipe Options</h1> 
-
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar">
+        <h2>Results</h2>
+        <ul id="places"></ul>
+        <button id="more">Load more results</button>
+      </div>
+    </div>
     <!-- script links -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M&libraries=places">
+    </script>
     <script src="assets/js/results.js"></script> 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6xeHz0LvbZvjRV2pp1eA00sbEjms-b1M&libraries=places"></script>
   </body>
 </html>
