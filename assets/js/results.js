@@ -3,6 +3,9 @@ console.log("this is the results page")
 var restBut = $('#rest')
 var reciBut = $('#reci') 
 
+var row1 = $('#row1')
+var row2 = $('#row2')
+
 //geoLocation to get latLon of user
 var lat = ''
 var lon = ''
@@ -49,7 +52,7 @@ reciBut.on('click', function(){
 })
 
 function spoonFetch(){
-var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=indian&apiKey=446369fd8c0b4e3eb39992c76f883a83"
+var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=indian&addRecipeInformation=true&apiKey=446369fd8c0b4e3eb39992c76f883a83"
 fetch(targetURL)
     .then(function(response) {
         console.log(response)
@@ -57,13 +60,45 @@ fetch(targetURL)
     })
     .then(function(data){
       console.log(data)
+      displayInfo(data)
       localStorage.setItem('reciResp', JSON.stringify(data))
     })
 }
-
 var reciResp = JSON.parse(localStorage.getItem('reciResp'))
-console.log(reciResp)
 
+function displayInfo(obj) {
+var recipeTitle = obj.results[0].title
+console.log(recipeTitle)
+console.log(reciResp)
+  var newContainer = $('<div>').addClass("col s4")
+  var newCard = $('<div>').addClass('card blue-grey darken-1')
+  var newContent = $('<div>').addClass('card-content white-text')
+  var newTitle = $('<span>').addClass('card-title dark-grey-text')
+  newTitle.text(obj.results[0].title)
+  var newImgHolder = $('<div>').addClass('card-image')
+  var newPic = $('<img>').attr('src',obj.results[0].image)
+  var newLink = $('<a>').attr('href',obj.results[0].sourceUrl)
+
+  newLink.append(newTitle)
+  newContent.append(newLink)
+  newCard.append(newImgHolder)
+  newCard.append(newContent)
+  newImgHolder.append(newPic)
+  newContainer.append(newCard)
+  row1.append(newContainer)
+}
+
+displayInfo(reciResp)
+
+
+// when they click the restaurants button
+// calls taFetch()
+// make a new card to put on the page for the first 5 results
+// within each card 
+//    Restaurnt Name
+//    Address
+//    Rating
+//    Website
 
 function taFetch(x,y){
 const opts = {
