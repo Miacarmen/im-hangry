@@ -46,13 +46,13 @@ function cardFlipWhenClicked(cardObjects){
 
 
 // set up cards
-let cardObjects =
-    createCards(document.getElementById("card-container"), shuffleCards());
-if (cardObjects !=null){
-    for (let i = 0; i < cardObjects.length; i++){
-        cardFlipWhenClicked(cardObjects);
-    }
-}
+// let cardObjects =
+//     createCards(document.getElementById("card-container"), shuffleCards());
+// if (cardObjects !=null){
+//     for (let i = 0; i < cardObjects.length; i++){
+//         cardFlipWhenClicked(cardObjects);
+//     }
+// }
 
 
 
@@ -72,7 +72,7 @@ $('#reselectbtn').click(function(event) {
 });
 
 // add on click event listener to resultbtn
-$('#result').click(function(event) {
+$('#resultbtn').click(function(event) {
     event.preventDefault();
     console.log('button clicked');
     // link to resultspage.html
