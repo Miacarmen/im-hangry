@@ -90,7 +90,13 @@ function displayInfo(obj) {
 
 displayInfo(reciResp)
 
+// let infoDisplay = []
 
+// function infoDisplay(obj); {
+//     for (var i = 0; i < infoDisplay.length; i++);{
+
+//     }
+// }
 
 // when they click the restaurants button
 // calls taFetch()
