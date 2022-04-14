@@ -1,7 +1,7 @@
 var toWheel = $("#toWheel");
 const welcomeButton = document.getElementById('welcomebtn');
 const foodList = document.getElementById('list');
-const nextButton = document.getElementById('nextbtn');
+const nextButton = document.getElementById('next');
 
 console.log("script is linked")
 // var APIkey = ""
