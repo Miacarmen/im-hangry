@@ -18,18 +18,11 @@ h1 {
     font-size: 100px;
 }
 
-.list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 2%;
-}
 
 .list span {
     color: #FEFAE0;
-    margin-right: 10%
+    font-size: 36px;
+    line-height: 2;
 }
 
 .list input {
@@ -50,11 +43,16 @@ h1 {
     color: #FEFAE0;
 }
 
+.buttonHolder{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin-bottom: 10%;
+}
+
 .nextbtn {
     text-align: center;
-    display: grid;
-    margin: auto;
-    margin-top: 2%;
+    align-self: center;
     border-radius: 5px;
     background-color: #283618;
     color: #FEFAE0;
