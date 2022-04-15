@@ -15,8 +15,8 @@ for (let i = 0; i < cuisine.length; i++) {
   cardContainer.appendChild(card);
 //   adding background image to card
 
-//   $(card).attr("src","assets/pics/cardimage.png");
-}
+card.classList.add('card-up');
+// add text content to each card if class = card-up
 
 
 // $(`<img src='./assets/pics/cardimage.png'>`).appendTo(".card-down");
@@ -44,12 +44,11 @@ console.log(cuisine);
 // Flip card--- add a disable button to stop other cards from being flipped after one card is flipped
 var flipped = false;
 $('.card-down').click(function(){
-<<<<<<< HEAD
     // toggle card-up
     $(this).toggleClass('card-up');
     console.log("flip");
+    
     $(this).toggleClass('card-down');
-=======
 
     if (!flipped){
         flipped = true
@@ -59,10 +58,9 @@ $('.card-down').click(function(){
     // $("flipped").attr("disabled", true);
     // onclick = save(); this.disabled = true;
 
->>>>>>> bca6ad596f07cc52f7186be425f001f7b549895d
 });
 
-// card.textContent = cuisine[i];
+
 
 // add a re-shuffle button
 $("#reshufflebtn").click(function (event) {
