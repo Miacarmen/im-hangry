@@ -16,7 +16,6 @@ card.textContent = "card";
 //   adding background image to card
 //   $(`<img src='assets/pics/cardimage.png'>`).appendTo("card-container");
 //   $(card).attr("src","assets/pics/cardimage.png");
-
 }
 
 
@@ -24,17 +23,20 @@ card.textContent = "card";
 
 
 // function for card shuffle
-function shuffleCards (cuisine) {
+function shuffleCards (arr) {
   // have selection of food come here to shuffle in cards
   // grabs selected variable from local storage
-  for (var i = cuisine.length - 1; i > 0; i--) {
+  for (var i = arr.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
-    var temp = cuisine[i];
-    cuisine[i] = cuisine[j];
-    cuisine[j] = temp;
+    var temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
   }
-  return;
+  // return;
 }
+console.log(cuisine)
+shuffleCards(cuisine)
+console.log(cuisine)
 
 // Flip card
 $('.card-down').click(function(){
@@ -43,10 +45,6 @@ $('.card-down').click(function(){
   
 });
 
-
-
-
-
 // add a re-shuffle button
 $("#reshufflebtn").click(function (event) {
   event.preventDefault();
@@ -54,7 +52,6 @@ $("#reshufflebtn").click(function (event) {
   // invoke shuffle function (using jquery)
 
 });
-
 // add a reselect button
 $("#reselectbtn").click(function (event) {
   event.preventDefault();
@@ -70,3 +67,4 @@ $("#resultbtn").click(function (event) {
   // link to resultspage.html
   window.location.href = "resultsPage.html";
 });
+
