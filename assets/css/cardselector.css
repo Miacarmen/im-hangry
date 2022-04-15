@@ -28,12 +28,12 @@ h3 {
 }
 
 .card-down, .card-up{
-    width: 125px;
-    height: 175px;
+    /* width: 125px;
+    height: 175px; */
     border-radius: 5px;
     transition-duration: .3s;
     margin: 2%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .card-down{
     background-color: #FEFAE0;
@@ -41,6 +41,7 @@ h3 {
     transition-duration: .3s;
     
 }
+
 .card-up{
     background-position: center;
     background-size: cover;
