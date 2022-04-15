@@ -21,10 +21,10 @@ for (let i = 0; i < cuisine.length; i++) {
 }
 
 // $(`<img src='./assets/pics/cardimage.png'>`).appendTo(".card-down");
-$(card).click(function() {
-    card.classList.add('card-up');
-    card.classList.remove('card-down');
-});
+// $(card).click(function() {
+//     card.classList.add('card-up');
+//     card.classList.remove('card-down');
+// });
 
 // function for card shuffle
 function shuffleCards(arr) {
