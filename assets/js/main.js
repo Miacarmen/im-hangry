@@ -33,8 +33,10 @@ nextButton.click(function(event) {
             
         }
     })
+    
+    localStorage.setItem('selected' , JSON.stringify(selected));
     console.log(selected);
-    localStorage.setItem('selected', JSON.stringify(selected));
+    
     window.location.href='cardselectorPage.html';
 });
 
