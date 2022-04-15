@@ -6,8 +6,8 @@ for (let i = 0; i < cuisine.length; i++) {
   var card = document.createElement("div");
 
   card.classList.add("card-down");
-
-  //   $(card).append($(`<img src='./assets/pics/cardimage.png' width='125px' height='175px'>`));
+  card.textContent = cuisine [i];
+ $(card).append($(`<img src='./assets/pics/cardimage.png' width='225px' height='275px'>`));
   cardContainer.appendChild(card);
   //   adding background image to card
 
