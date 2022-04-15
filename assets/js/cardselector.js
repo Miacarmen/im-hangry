@@ -38,7 +38,7 @@ console.log(cuisine)
 shuffleCards(cuisine)
 console.log(cuisine)
 
-// Flip card
+// Flip card--- add a disable button to stop other cards from being flipped after one card is flipped
 $('.card-down').click(function(){
     $(this).toggleClass('flipped');
     console.log("flip");
