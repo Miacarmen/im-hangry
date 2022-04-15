@@ -17,7 +17,7 @@ for (let i = 0; i < cuisine.length; i++) {
 
 card.classList.add('card-up');
 // add text content to each card if class = card-up
-
+};
 
 // $(`<img src='./assets/pics/cardimage.png'>`).appendTo(".card-down");
 
@@ -84,4 +84,3 @@ $("#resultbtn").click(function (event) {
   // link to resultspage.html
   window.location.href = "resultsPage.html";
 });
-
