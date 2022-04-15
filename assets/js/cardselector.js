@@ -6,14 +6,12 @@ for (let i = 0; i < cuisine.length; i++) {
   var card = document.createElement("div");
 
   var cardcontainer = $('#card-container').append(card);
-  card.classList.add("card-down, card-up");
+  card.classList.add("card-down","card-up");
   card.classList.add("card-up");
   card.textContent = cuisine[i];
  $(card).append($(`<img src='./assets/pics/cardimage.png' width='125px' height='175px'>`));
-
-  cardcontainer.appendChild(card);
+  cardcontainer.append(card);
   //   adding background image to card
-
   // add text content to each card if class = card-up
 }
 
@@ -49,22 +47,9 @@ $(".card-down").click(function () {
 
   $(this).toggleClass("card-down");
 
-  // toggle card-up
-  $(this).toggleClass("card-up");
-  console.log("flip");
-
-  $(this).toggleClass("card-down");
-
-  if (!flipped) {
-    flipped = true;
-    $(this).toggleClass("flipped");
-  }
-
   // $("flipped").attr("disabled", true);
   // onclick = save(); this.disabled = true;
 
-  // $("flipped").attr("disabled", true);
-  // onclick = save(); this.disabled = true;
 });
 
 
