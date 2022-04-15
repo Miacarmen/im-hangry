@@ -23,12 +23,12 @@ h3 {
 
 
 .card-down, .card-up{
-   
     width: 125px;
     height: 175px;
     border-radius: 5px;
     transition-duration: .3s;
     margin: auto;
+    overflow: hidden;
 }
 .card-down{
     background-color: #FEFAE0;
@@ -39,14 +39,14 @@ h3 {
     background-position: center;
     background-size: cover;
     /* transform: rotateY(180deg); */
-    background-color: aliceblue;
+    
 }
 .card-down.flipped{
     transform: rotateY(180deg);
 }
-.card-up.card-down.flipped{
+.card-up.flipped{
     transform: rotateY(180deg);
-    background-color: aliceblue;
+    background-color: rgb(26, 115, 194);
 }
 
 
