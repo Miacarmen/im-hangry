@@ -26,7 +26,6 @@ h3 {
    
     width: 125px;
     height: 175px;
-    backface-visibility: hidden;
     border-radius: 5px;
     transition-duration: .3s;
     margin: auto;
