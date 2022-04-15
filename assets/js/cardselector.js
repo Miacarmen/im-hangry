@@ -1,7 +1,6 @@
 var stored = localStorage.getItem("selected");
-console.log(typeof stored);
 var cuisine = JSON.parse(stored);
-console.log(typeof cuisine);
+
     
 
 
@@ -11,8 +10,8 @@ for (let i = 0; i < cuisine.length; i++) {
   var cardContainer = document.getElementById("card-container");
   var card = document.createElement("div");
   card.classList.add("card-down","card-up");
-//   card.classList.add("card-up");
-//   card.textContent = "card";
+card.classList.add("card-up");
+card.textContent = "card";
   cardContainer.appendChild(card);
 //   adding background image to card
 //   $(`<img src='assets/pics/cardimage.png'>`).appendTo("card-container");
@@ -36,7 +35,6 @@ function shuffleCards (cuisine) {
   }
   return;
 }
-
 
 // Flip card
 $('.card-down').click(function(){
