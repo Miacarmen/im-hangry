@@ -20,14 +20,19 @@ h3 {
     font-size: 50px;
 }
 
-
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .card-down, .card-up{
     width: 125px;
     height: 175px;
     border-radius: 5px;
     transition-duration: .3s;
-    margin: auto;
+    margin: 2%;
     overflow: hidden;
 }
 .card-down{
@@ -51,10 +56,15 @@ h3 {
 
 /* control buttons */
 
-.btn-group button {    
+.btn-group {    
     display: flex;
-    float: left;
-    margin-left: 10px;
+    float: center;
+    margin: 1%;
+    justify-content: center;
+}
+
+button {
+    margin: 1%;
 }
 
 

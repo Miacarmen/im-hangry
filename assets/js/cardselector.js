@@ -32,17 +32,19 @@ function shuffleCards (arr) {
     arr[i] = arr[j];
     arr[j] = temp;
   }
-  // return;
 }
-console.log(cuisine)
-shuffleCards(cuisine)
-console.log(cuisine)
+
+console.log(cuisine);
+shuffleCards(cuisine);
+console.log('shuffled');
+console.log(cuisine);
+
+
 
 // Flip card
 $('.card-down').click(function(){
     $(this).toggleClass('flipped');
     console.log("flip");
-  
 });
 
 // add a re-shuffle button
