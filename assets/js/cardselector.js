@@ -8,17 +8,18 @@ var cuisine = JSON.parse(stored);
 for (let i = 0; i < cuisine.length; i++) {
   var cardContainer = document.getElementById("card-container");
   var card = document.createElement("div");
-  card.classList.add("card-down","card-up");
-  card.classList.add("card-up");
-  card.textContent = "card";
+
+  card.classList.add("card-down");
+  
+  $(card).append($(`<img src='./assets/pics/cardimage.png' width='125px' height='175px'>`));
   cardContainer.appendChild(card);
 //   adding background image to card
-//   $(`<img src='assets/pics/cardimage.png'>`).appendTo("card-container");
+
 //   $(card).attr("src","assets/pics/cardimage.png");
 }
 
 
-
+// $(`<img src='./assets/pics/cardimage.png'>`).appendTo(".card-down");
 
 
 // function for card shuffle
@@ -42,9 +43,13 @@ console.log(cuisine);
 
 // Flip card
 $('.card-down').click(function(){
-    $(this).toggleClass('flipped');
+    // toggle card-up
+    $(this).toggleClass('card-up');
     console.log("flip");
+    $(this).toggleClass('card-down');
 });
+
+// card.textContent = cuisine[i];
 
 // add a re-shuffle button
 $("#reshufflebtn").click(function (event) {
