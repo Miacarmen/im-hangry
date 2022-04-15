@@ -2,20 +2,33 @@ var stored = localStorage.getItem("selected");
 var cuisine = JSON.parse(stored);
 
 for (let i = 0; i < cuisine.length; i++) {
-  var cardContainer = document.getElementById("card-container");
+//   var cardContainer = document.getElementById("card-container");
   var card = document.createElement("div");
 
+<<<<<<< HEAD
+  var cardcontainer = $('#card-container').append(card);
+  card.classList.add("card-down, card-up");
+  card.classList.add("card-up");
+  card.textContent = cuisine[i];
+  //   $(card).append($(`<img src='./assets/pics/cardimage.png' width='125px' height='175px'>`));
+  cardcontainer.appendChild(card);
+=======
   card.classList.add("card-down");
   card.textContent = cuisine [i];
  $(card).append($(`<img src='./assets/pics/cardimage.png' width='225px' height='275px'>`));
   cardContainer.appendChild(card);
+>>>>>>> 0faa15f0d80a052572b3466de588ca48206cec36
   //   adding background image to card
 
-  card.classList.add("card-up");
+  
   // add text content to each card if class = card-up
 }
 
 // $(`<img src='./assets/pics/cardimage.png'>`).appendTo(".card-down");
+$(card).click(function() {
+    card.classList.add('card-up');
+    card.classList.remove('card-down');
+});
 
 // function for card shuffle
 function shuffleCards(arr) {
