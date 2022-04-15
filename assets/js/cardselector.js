@@ -31,7 +31,7 @@ function shuffleCards() {
   return;
 }
 
-// change to jquery onClick to flip card
+// Flip card
 $('.card-down').click(function(){
     $(this).toggleClass('flipped');
     console.log("flip");
