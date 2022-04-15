@@ -1,29 +1,24 @@
 var stored = localStorage.getItem("selected");
 var cuisine = JSON.parse(stored);
 
-    
-
-
-
 for (let i = 0; i < cuisine.length; i++) {
   var cardContainer = document.getElementById("card-container");
   var card = document.createElement("div");
 
   card.classList.add("card-down");
-  
-  $(card).append($(`<img src='./assets/pics/cardimage.png' width='125px' height='175px'>`));
-  cardContainer.appendChild(card);
-//   adding background image to card
 
-card.classList.add('card-up');
-// add text content to each card if class = card-up
-};
+  //   $(card).append($(`<img src='./assets/pics/cardimage.png' width='125px' height='175px'>`));
+  cardContainer.appendChild(card);
+  //   adding background image to card
+
+  card.classList.add("card-up");
+  // add text content to each card if class = card-up
+}
 
 // $(`<img src='./assets/pics/cardimage.png'>`).appendTo(".card-down");
 
-
 // function for card shuffle
-function shuffleCards (arr) {
+function shuffleCards(arr) {
   // have selection of food come here to shuffle in cards
   // grabs selected variable from local storage
   for (var i = arr.length - 1; i > 0; i--) {
@@ -36,40 +31,34 @@ function shuffleCards (arr) {
 
 console.log(cuisine);
 shuffleCards(cuisine);
-console.log('shuffled');
+console.log("shuffled");
 console.log(cuisine);
-
-
 
 // Flip card--- add a disable button to stop other cards from being flipped after one card is flipped
 var flipped = false;
-$('.card-down').click(function(){
-    // toggle card-up
-    $(this).toggleClass('card-up');
-    console.log("flip");
-    
-    $(this).toggleClass('card-down');
+$(".card-down").click(function () {
+  // toggle card-up
+  $(this).toggleClass("card-up");
+  console.log("flip");
 
-    // toggle card-up
-    $(this).toggleClass('card-up');
-    console.log("flip");
+  $(this).toggleClass("card-down");
 
-    $(this).toggleClass('card-down');
+  // toggle card-up
+  $(this).toggleClass("card-up");
+  console.log("flip");
 
+  $(this).toggleClass("card-down");
 
-    if (!flipped){
-        flipped = true
-       $(this).toggleClass('flipped');
-    }
-    
-    // $("flipped").attr("disabled", true);
-    // onclick = save(); this.disabled = true;
+  if (!flipped) {
+    flipped = true;
+    $(this).toggleClass("flipped");
+  }
 
+  // $("flipped").attr("disabled", true);
+  // onclick = save(); this.disabled = true;
 
-    // $("flipped").attr("disabled", true);
-    // onclick = save(); this.disabled = true;
-
-
+  // $("flipped").attr("disabled", true);
+  // onclick = save(); this.disabled = true;
 });
 
 
@@ -79,7 +68,6 @@ $("#reshufflebtn").click(function (event) {
   event.preventDefault();
   console.log("button clicked");
   // invoke shuffle function (using jquery)
-
 });
 // add a reselect button
 $("#reselectbtn").click(function (event) {
