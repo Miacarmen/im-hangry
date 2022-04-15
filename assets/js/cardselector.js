@@ -10,10 +10,14 @@ for (let i = 0; i < cuisine.length; i++) {
   card.classList.add("card-up");
   card.textContent = cuisine[i];
  $(card).append($(`<img src='./assets/pics/cardimage.png' width='125px' height='175px'>`));
+
   cardcontainer.appendChild(card);
   //   adding background image to card
 
-  
+  $(card).click(function() {
+    card.classList.add('card-up');
+    card.classList.remove('card-down');
+});
   // add text content to each card if class = card-up
 }
 
