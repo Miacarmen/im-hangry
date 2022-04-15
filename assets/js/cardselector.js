@@ -40,12 +40,15 @@ console.log(cuisine);
 
 // Flip card--- add a disable button to stop other cards from being flipped after one card is flipped
 var flipped = false;
-$(".card-down").click(function () {
+$(".card-down").click(function (e) {
   // toggle card-up
+  var name = e.target.textContent
+  console.log (name);
   if (!flipped) {
       flipped = true
       $(this).toggleClass("flipped");
   }
+  localStorage.setItem("cuisine", name);
 });
 
 
