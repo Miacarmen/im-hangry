@@ -37,6 +37,7 @@ function shuffleCards (cuisine) {
   return;
 }
 
+
 // Flip card
 $('.card-down').click(function(){
     $(this).toggleClass('flipped');
