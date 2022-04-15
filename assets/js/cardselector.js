@@ -1,6 +1,7 @@
 var stored = localStorage.getItem("selected");
 var cuisine = JSON.parse(stored);
 
+shuffleCards(cuisine);
 for (let i = 0; i < cuisine.length; i++) {
 //   var cardContainer = document.getElementById("card-container");
   var card = document.createElement("div");
