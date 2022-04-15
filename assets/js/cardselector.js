@@ -42,7 +42,8 @@ console.log(cuisine)
 $('.card-down').click(function(){
     $(this).toggleClass('flipped');
     console.log("flip");
-  
+    // $("flipped").attr("disabled", true);
+    // onclick = save(); this.disabled = true;
 });
 
 // add a re-shuffle button
