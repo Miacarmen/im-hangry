@@ -14,13 +14,7 @@ Deciding on what to eat when one is hungry can sometimes prove to be a tedious t
 ## Usage:
 - add images of website
 
-![Alt img](./assets/pics/landingpage.png)
-
-![Alt img](./assets/pics/optionpage.png)
-
-![Alt img](./assets/pics/deckselecREADME.png)
-
-![Alt img](./assets/pics/resultspage.png)
+![Alt img](./assets/pics/demogif.gif)
 
 Deployed Link: https://miacarmen.github.io/im-hangry/
 
