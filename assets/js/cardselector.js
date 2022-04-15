@@ -5,7 +5,6 @@ var cuisine = JSON.parse(stored);
 
 
 
-
 for (let i = 0; i < cuisine.length; i++) {
   var cardContainer = document.getElementById("card-container");
   var card = document.createElement("div");
