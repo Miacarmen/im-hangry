@@ -32,15 +32,19 @@ function shuffleCards (arr) {
     arr[i] = arr[j];
     arr[j] = temp;
   }
-  // return;
 }
-console.log(cuisine)
-shuffleCards(cuisine)
-console.log(cuisine)
+
+console.log(cuisine);
+shuffleCards(cuisine);
+console.log('shuffled');
+console.log(cuisine);
+
+
 
 // Flip card--- add a disable button to stop other cards from being flipped after one card is flipped
 var flipped = false;
 $('.card-down').click(function(){
+
     if (!flipped){
         flipped = true
        $(this).toggleClass('flipped');
@@ -48,6 +52,7 @@ $('.card-down').click(function(){
     
     // $("flipped").attr("disabled", true);
     // onclick = save(); this.disabled = true;
+
 });
 
 // add a re-shuffle button
