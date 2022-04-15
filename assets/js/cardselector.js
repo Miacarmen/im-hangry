@@ -5,10 +5,14 @@ var cuisine = JSON.parse(stored);
 for (let i = 0; i < cuisine.length; i++) {
   var cardContainer = document.getElementById("card-container");
   var card = document.createElement("div");
-  card.classList.add("card-down");
-  card.textContent = "card" + i;
+  card.classList.add("card-down","card-up");
+//   card.classList.add("card-up");
+//   card.textContent = "card";
   cardContainer.appendChild(card);
-  
+//   adding background image to card
+//   $(`<img src='assets/pics/cardimage.png'>`).appendTo("card-container");
+//   $(card).attr("src","assets/pics/cardimage.png");
+
 }
 
 
@@ -17,41 +21,30 @@ for (let i = 0; i < cuisine.length; i++) {
 function shuffleCards() {
   // have selection of food come here to shuffle in cards
   // grabs selected variable from local storage
-
-  for (var i = cards.length - 1; i > 0; i--) {
+  let selected = ["American", "Argentinian", "BBQ"];
+  for (var i = selected.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
-    var temp = cardContainer[i];
-    cardContainer[i] = cardContainer[j];
-    cardContainer[j] = temp;
+    var temp = selected[i];
+    selected[i] = selected[j];
+    selected[j] = temp;
   }
-  console.log(cardContainer);
   return;
 }
 
-
-
-// change to jquery onClick to flip card
-function cardFlipWhenClicked(cardObjects) {
-  cardObjects.element = function () {
-    // add event listener here for on  click response
-    if (cardObjects.element.classList.contains("flipped")) {
-      return;
-    }
-    cardObjects.element.classList.add("flipped");
-  };
-}
-
-
-
+// Flip card
+$('.card-down').click(function(){
+    $(this).toggleClass('flipped');
+    console.log("flip");
+  
+});
 
 
 // add a re-shuffle button
-
-$('#reshufflebtn').click(function(event) {
-    
-})
-
-
+$("#reshufflebtn").click(function (event) {
+  event.preventDefault();
+  console.log("button clicked");
+  // invoke shuffle function (using jquery)
+});
 
 // add a reselect button
 $("#reselectbtn").click(function (event) {
