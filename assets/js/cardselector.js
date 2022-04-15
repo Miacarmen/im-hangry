@@ -47,7 +47,9 @@ function cardFlipWhenClicked(cardObjects) {
 
 // add a re-shuffle button
 
-$("#reshufflebtn").click(shuffleCards());
+$('#reshufflebtn').click(function(event) {
+    
+})
 
 
 
