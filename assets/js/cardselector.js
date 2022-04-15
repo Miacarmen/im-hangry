@@ -48,6 +48,7 @@ $('.card-down').click(function(){
     // toggle card-up
     $(this).toggleClass('card-up');
     console.log("flip");
+<<<<<<< HEAD
     $(this).toggleClass('card-down');
 =======
 
@@ -60,6 +61,12 @@ $('.card-down').click(function(){
     // onclick = save(); this.disabled = true;
 
 >>>>>>> bca6ad596f07cc52f7186be425f001f7b549895d
+=======
+
+    // $("flipped").attr("disabled", true);
+    // onclick = save(); this.disabled = true;
+
+>>>>>>> 48b2466 (test commit)
 });
 
 // card.textContent = cuisine[i];
