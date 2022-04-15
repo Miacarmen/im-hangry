@@ -42,13 +42,4 @@ nextButton.click(function(event) {
 
 
 
-// on click of next button
-// update cards with list of selected foods
 
-// hide list screen
-// display card screen
-
-// CARDSELECTOR.js HERE
-
-// on click of random card
-// pull api 
