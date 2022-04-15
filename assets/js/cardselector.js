@@ -1,6 +1,11 @@
 var stored = localStorage.getItem("selected");
-console.log(stored);
+console.log(typeof stored);
 var cuisine = JSON.parse(stored);
+console.log(typeof cuisine);
+    
+
+
+
 
 for (let i = 0; i < cuisine.length; i++) {
   var cardContainer = document.getElementById("card-container");
@@ -17,16 +22,17 @@ for (let i = 0; i < cuisine.length; i++) {
 
 
 
+
+
 // function for card shuffle
-function shuffleCards() {
+function shuffleCards (cuisine) {
   // have selection of food come here to shuffle in cards
   // grabs selected variable from local storage
-  let selected = ["American", "Argentinian", "BBQ"];
-  for (var i = selected.length - 1; i > 0; i--) {
+  for (var i = cuisine.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
-    var temp = selected[i];
-    selected[i] = selected[j];
-    selected[j] = temp;
+    var temp = cuisine[i];
+    cuisine[i] = cuisine[j];
+    cuisine[j] = temp;
   }
   return;
 }
@@ -39,11 +45,15 @@ $('.card-down').click(function(){
 });
 
 
+
+
+
 // add a re-shuffle button
 $("#reshufflebtn").click(function (event) {
   event.preventDefault();
   console.log("button clicked");
   // invoke shuffle function (using jquery)
+
 });
 
 // add a reselect button
