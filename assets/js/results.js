@@ -1,11 +1,11 @@
 console.log("this is the results page")
-
+var cuisine = localStorage.getItem('cuisine')
+// var cuisine = 'chinese'
 var restBut = $('#rest')
 var reciBut = $('#reci')
 
 var row1 = $('#row1')
 var row2 = $('#row2')
-
 //geoLocation to get latLon of user
 var lat = ''
 var lon = ''
@@ -52,7 +52,7 @@ reciBut.on('click', function() {
 })
 
 function spoonFetch() {
-  var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=indian&addRecipeInformation=true&apiKey=446369fd8c0b4e3eb39992c76f883a83"
+  var targetURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=" + cuisine + "&addRecipeInformation=true&apiKey=446369fd8c0b4e3eb39992c76f883a83"
   fetch(targetURL)
     .then(function(response) {
       console.log(response)
@@ -120,7 +120,7 @@ function taFetch(x, y) {
     }
   };
 
-  var fetchURL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=' + x + '&longitude=' + y + '&limit=30&currency=USD&distance=2&open_now=false&lunit=km&lang=en_US'
+  var fetchURL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=' + x + '&longitude=' + y + "&limit=30&combined_food=" + cuisine + '&currency=USD&distance=2&open_now=false&lunit=km&lang=en_US'
   fetch(fetchURL, opts)
     .then(response => response.json())
     .then(function(data) {

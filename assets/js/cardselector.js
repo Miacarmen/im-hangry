@@ -50,6 +50,13 @@ $('.card-down').click(function(){
     
     $(this).toggleClass('card-down');
 
+    // toggle card-up
+    $(this).toggleClass('card-up');
+    console.log("flip");
+
+    $(this).toggleClass('card-down');
+
+
     if (!flipped){
         flipped = true
        $(this).toggleClass('flipped');
@@ -57,6 +64,11 @@ $('.card-down').click(function(){
     
     // $("flipped").attr("disabled", true);
     // onclick = save(); this.disabled = true;
+
+
+    // $("flipped").attr("disabled", true);
+    // onclick = save(); this.disabled = true;
+
 
 });
 
